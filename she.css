@@ -1,0 +1,86 @@
+.box{
+	position: relative;
+	margin: 0 auto;
+	width: 800px;
+	height: 600px;
+	background-image: url(bj.jpg);
+	-webkit-background-size: cover;
+
+}
+.over{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0 auto;
+	width: 800px;
+	height: 600px;
+	text-align: center;
+	line-height: 600px;
+	background: #58a;
+	color: white;
+	text-shadow: 0 1px hsl(0,0%,85%),
+	             0 2px hsl(0,0%,80%),
+	             0 3px hsl(0,0%,75%),
+	             0 4px hsl(0,0%,70%),
+	             0 5px hsl(0,0%,65%),
+	             0 5px 10px black;
+	font: bold 500%/1 Rockwell, serif;
+
+}
+#scene{
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	background-image: url(bv.jpg);
+	-webkit-background-size: contain;
+}
+#scene div{
+	width: 23px;
+	height: 23px;
+	border:1px solid #fff;
+	float: left;
+}
+#scene .she{
+	background-image: url(d.jpg);
+	-webkit-background-size: contain;
+}
+#scene .shiwu{
+	background: blue;
+	background-image: url(w.jpg);
+	-webkit-background-size: cover;
+}
+.btn{
+	float: left;
+	width: 60px;
+	height: 40px;
+	text-decoration: none;
+	color: #fff;
+	margin: 30px 30px;
+	background: tan;
+	text-align: center;
+	line-height: 40px;
+}
+a{
+	text-decoration: none;
+	color: #fff;	
+	font-weight: bold;
+
+}
+.start{
+	margin-left: 160px;
+}
+.new{
+	margin: 0 auto;
+
+	margin-top: 100px;
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+}
+.over .lenght{
+	color: red;
+	font-size: 18px;
+	margin-top: 20px;
+	text-shadow:none
+}
