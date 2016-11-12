@@ -141,9 +141,15 @@ $(function(){
 		 t=setInterval(run,200);
 	}
 	news.onclick=function(){
-
-		over.style.display="none";
+//		over.style.display="none";
  		window.location.reload();
-
+		enter.style.display="none";
 	}
+//	restart.onclick=function(){
+////		over.style.display="none";
+// 		window.location.reload();
+//		enter.style.display="none";
+ 		
+
+//	}
 })
