@@ -13,7 +13,7 @@
 }
 	/*<!--游戏结束页面-->*/
 .over{
-	display: none;
+	/*display: none;*/
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -25,15 +25,27 @@
 	text-align: center;
 	line-height: 600px;
 	background: #58a;
-	color: white;
-	text-shadow: 0 1px hsl(0,0%,85%),
+	color: greenyellow;
+	/*text-shadow: 0 1px hsl(0,0%,85%),
 	             0 2px hsl(0,0%,80%),
 	             0 3px hsl(0,0%,75%),
 	             0 4px hsl(0,0%,70%),
 	             0 5px hsl(0,0%,65%),
-	             0 5px 10px black;
+	             0 5px 10px black;*/
 	font: bold 500%/1 Rockwell, serif;
-
+	transform: scale(0,0);
+	font-family: "microsoft sans serif";
+	background: url(ba.jpg);
+	background-size: cover;
+	z-index: 1000;
+}
+.over-act{
+	transition: all 0.7s linear;
+	transform:scale(1,1);
+}
+.over-act2{
+	transition: all 0.7s linear;
+	transform:scale(0,0);
 }
 #scene{
 	width: 500px;
@@ -41,7 +53,7 @@
 	margin: 0 auto;
 	margin-top: 80px;
 	background: transparent;
-	border: 2px solid #96EC0E;
+	border: 2px solid #95EC16;
 }
 #scene div{
 	width: 23px;
@@ -61,17 +73,44 @@
 
 .new{
 	margin: 0 auto;
-
-	margin-top: 100px;
+	font-family: "microsoft sans serif";
+	padding-top: 350px;
 	width: 200px;
+	margin-left: 70%;
 	height: 40px;
-	font-size: 20px;
+	font-size: 30px;
+	color: green;
+	z-index: 1200;
 }
-.over .lenght{
-	color: red;
-	font-size: 18px;
+.new a{
+	color: #000;
+	text-decoration: none;
+	font-family: "microsoft yahei";
+}
+.over h1{
+	margin-top: 100px;
+	font-size: 100px;
+	color: #000;
+}
+.lenght{
+	position: absolute;
+	left: 44%;
+	bottom: 13px;
+	color: burlywood;
+	font-size: 32px;
 	margin-top: 20px;
-	text-shadow:none
+	text-shadow:none;
+	color: #000;
+	font-family: "苹方";
+	z-index: 1200;
+	
+}
+.sheico{
+	position: absolute;
+	left: 38%;
+	top: 220px;
+	z-index: -1;
+	height: 400px;
 }
 .gui{
 	position: absolute;
@@ -85,13 +124,11 @@
 	bottom: 270px;
 	width: 250px;
 	height: 180px;
-	/*border: 1px solid #000;*/
 	font-size: 12px;
 	font-family: "microsoft yahei";
 	text-space-collapse: 0;
 	line-height: 16px;
 	text-align: left;
-	/*margin: 1px 6px;*/
 	
 }
 .guize h6{
@@ -112,6 +149,7 @@
 	position: absolute;
 	left: 100px;
 	top: 100px;
+	/*height: 100%;*/
 }
 .button{
 	display: block;
@@ -127,29 +165,56 @@
 	color: #fff;	
 	font-weight: bold;
 	font-family: "microsoft yahei";
-
+	z-index: 97;
+}
+.start,.stop{
+	z-index: 99;
 }
 /* green */
 .green{
 	transition: all .2s linear;
-	color:#e8f0de;
-	border:solid 1px #538312;
-	border-radius: 4px;
-	background:#64991e;
-	background:-webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
-	background:-moz-linear-gradient(top,  #7db72f,  #4e7d0e);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
 }
 .green:hover{
 	transform: scale(1.2);
-	background:#538018;
-	background:-webkit-gradient(linear, left top, left bottom, from(#6b9d28), to(#436b0c));
-	background:-moz-linear-gradient(top,  #6b9d28,  #436b0c);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b9d28', endColorstr='#436b0c');
 }
-.green:active{
-	color:#a9c08c;
-	background:-webkit-gradient(linear, left top, left bottom, from(#4e7d0e), to(#7db72f));
-	background:-moz-linear-gradient(top,  #4e7d0e,  #7db72f);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e7d0e', endColorstr='#7db72f');
+.small{
+	z-index: 99;
+}
+.po{
+	position: absolute;
+	left:0px;
+	bottom: 0px;
+	z-index: 98;
+	/*transition: all .2s linear;*/
+}
+.po:hover{
+	/*transform: scale(1.2);*/
+}
+.po-essy{
+	transition: transform 0.5s linear;
+	transform: translateY(70px);
+}
+.po-mid{
+	transition: transform 0.5s linear;
+	transform: translateY(140px);
+}
+.po-nan{
+	transition: transform 0.5s linear;
+	transform: translateY(210px);
+}
+.massege{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 500px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	z-index: 1;
+	color: #FFFF00;
+	font-size: 30px;
+	font-family: "微软雅黑";
 }

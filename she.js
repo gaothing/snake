@@ -1,6 +1,7 @@
 $(function(){
 	var box=$("#scene");
 	var t;
+	var n;
 	var over=$(".over")[0];
 	var len=$(".lenght")[0];
 	for (var i = 0; i < 20; i++) {
@@ -41,8 +42,8 @@ $(function(){
 		if(fangxiang=='you'){
 			var newtou=$('#'+jiutou.x+"-"+(jiutou.y+1));
 			if(newtou==undefined||panduan(jiutou.x,jiutou.y+1)){
-					var chang=she.length
-				over.style.display="block";
+				var chang=she.length-4
+				over.className="over over-act"
 				len.innerHTML="您的成绩为："+chang;
 				clearInterval(t);
 				return chang
@@ -55,8 +56,8 @@ $(function(){
 		}else if(fangxiang=='zuo'){
 			var newtou=$('#'+jiutou.x+"-"+(jiutou.y-1));
 			if(newtou==undefined||panduan(jiutou.x,jiutou.y-1)){
-				var chang=she.length
-				over.style.display="block";
+				var chang=she.length-4
+				over.className="over over-act"
 				len.innerHTML="您的成绩为："+chang;
 				clearInterval(t);
 				return chang
@@ -68,8 +69,8 @@ $(function(){
 		}else if(fangxiang=='xia'){
 			var newtou=$('#'+(jiutou.x+1)+"-"+jiutou.y);
 			if(newtou==undefined||panduan(jiutou.x+1,jiutou.y)){
-				var chang=she.length
-				over.style.display="block";
+				var chang=she.length-4
+				over.className="over over-act"
 				len.innerHTML="您的成绩为："+chang;
 				clearInterval(t);
 				return chang
@@ -81,8 +82,8 @@ $(function(){
 		}else if(fangxiang=='shang'){
 			var newtou=$('#'+(jiutou.x-1)+"-"+jiutou.y);
 			if(newtou==undefined||panduan(jiutou.x-1,jiutou.y)){
-				over.style.display="block";
-				var chang=she.length
+				over.className="over over-act"
+				var chang=she.length-4
 				clearInterval(t);
 				len.innerHTML="您的成绩为："+chang;
 				return chang
@@ -129,27 +130,82 @@ $(function(){
 	var stop=$(".stop")[0];
 	var cnt=$(".continue")[0];
 	var news=$(".new")[0];
+	var goout=$(".goout")[0];
+	var massege=$(".massege")[0]
+	var flag=true;
+	console.log()
 	start.onclick=function(){
+		console.log(80)
+		if(n!==200&&n!==400&&n!==100){
+			console.log(massege)
+			massege.innerHTML="请您选择游戏难度"
+			return
+		}
+		console.log(0908)
 		 clearInterval(t)
-		 t=setInterval(run,200);
+		 t=setInterval(run,n);
+		 flag=false;
 	}
 	stop.onclick=function(){
 		 clearInterval(t)
 	}
 	cnt.onclick=function(){
 		 clearInterval(t)
-		 t=setInterval(run,200);
+		 t=setInterval(run,n);
 	}
 	news.onclick=function(){
-//		over.style.display="none";
  		window.location.reload();
-		enter.style.display="none";
+		
 	}
-//	restart.onclick=function(){
-////		over.style.display="none";
-// 		window.location.reload();
-//		enter.style.display="none";
- 		
+	goout.onclick=function(){
+ 		over.className="over over-act"
+		len.innerHTML="您的成绩为："+chang-4;
+	}
+	var small=$(".small")[0];
+	var mid=$(".mid")[0];
+	
+	var essy=$(".essy")[0];
+	var nan=$(".nan")[0];
+	
+	small.onclick=function(){
+		
+		mid.className="button mid po po-mid"
+		essy.className="button essy po po-essy"
+		nan.className="button nan po po-nan"
+	}
+	essy.onclick=function(){
+		if(!flag){
+			return
+		}
+		console.log(8)
+		massege.innerHTML=""
+		this.style.background="#CCCCCC"
+		nan.style.background="tan"
+		mid.style.background="tan"
+		 n=400
+		
+	}
+	mid.onclick=function(){
+		if(!flag){
+			return
+		}
+		massege.innerHTML=""
+		this.style.background="#CCCCCC"
+		nan.style.background="tan"
+		essy.style.background="tan"
+		 n=200
+		
+	}
+	nan.onclick=function(){
+		if(!flag){
+			return
+		}
+		massege.innerHTML=""
+		essy.style.background="tan"
+		mid.style.background="tan"
+		this.style.background="#CCCCCC"
+		 n=100
+		 
+	}
 
-//	}
 })
